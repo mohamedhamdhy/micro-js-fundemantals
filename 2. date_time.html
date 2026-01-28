@@ -1,0 +1,78 @@
+<!-- 
+This tells the browser that this file is written in HTML.
+HTML is used to structure content on a web page.
+-->
+<html>
+  <body>
+    <!-- 
+Everything inside <body> is what the user actually sees
+in the browser window.
+-->
+
+    <!-- 
+    <h1> is a heading tag.
+    h1 is the largest heading size.
+    It is used here just to show a title on the page.
+    -->
+    <h1>My First JavaScript</h1>
+
+    <!-- 
+    <button> creates a clickable button on the web page.
+
+    type="button":
+    - Specifies that this button does NOT submit a form.
+    - It is just a normal clickable button.
+
+    onclick="...":
+    - onclick is an EVENT.
+    - An event is something the user does (click, hover, type, etc.).
+    - When the user CLICKS the button, the JavaScript code inside
+      onclick will be executed.
+    -->
+    <button
+      type="button"
+      onclick="
+        /*
+            document:
+            - Represents the entire HTML page loaded in the browser.
+
+            getElementById('demo'):
+            - Searches the HTML page for an element that has id='demo'.
+            - In this page, that element is the <p> tag below.
+
+            innerHTML:
+            - Refers to the content INSIDE that HTML element.
+            - We use it to change what is displayed on the page.
+
+            Date():
+            - A built-in JavaScript function.
+            - Returns the current date and time as text.
+
+            The '=' operator:
+            - Assigns the value on the right to the left side.
+
+            FULL MEANING:
+            - Find the element with id='demo'
+            - Replace its content with the current date and time
+            */
+        document.getElementById('demo').innerHTML = Date()
+      "
+    >
+      Click me to display Date and Time.
+    </button>
+
+    <!-- 
+    <p> stands for paragraph.
+    It is used to display text content.
+
+    id="demo":
+    - Gives this element a UNIQUE identifier.
+    - JavaScript uses this id to find and modify this element.
+    - IDs must be unique in an HTML page.
+
+    This paragraph is EMPTY at first.
+    JavaScript will insert text into it when the button is clicked.
+    -->
+    <p id="demo"></p>
+  </body>
+</html>
