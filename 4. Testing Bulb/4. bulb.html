@@ -1,0 +1,93 @@
+<!doctype html>
+<!-- 
+The <!doctype html> declaration:
+- Tells the browser that this is an HTML5 document.
+- Ensures the page uses modern standards mode for rendering.
+-->
+
+<html lang="en">
+  <!-- 
+<html> is the root element of the document.
+lang="en" specifies the language of the content as English.
+-->
+
+  <head>
+    <!-- 
+    <head> contains metadata about the document:
+    - Metadata is information about the page (not displayed directly)
+    - Includes character encoding, viewport settings, title, etc.
+    -->
+
+    <meta charset="UTF-8" />
+    <!-- 
+    Specifies the character encoding for the page as UTF-8.
+    This supports almost all characters and symbols.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 
+    Ensures the page scales properly on mobile devices.
+    - width=device-width → sets the page width to match the screen width
+    - initial-scale=1.0 → sets the initial zoom to 100%
+    -->
+
+    <title>Light Bulb Example</title>
+    <!-- 
+    Title displayed in the browser tab
+    -->
+  </head>
+
+  <body>
+    <!-- 
+    <body> contains all visible content on the webpage.
+    -->
+
+    <h2>What Can JavaScript Do?</h2>
+    <!-- 
+    <h2> is a heading element (second largest size)
+    Displays the title of this example.
+    -->
+
+    <p>JavaScript can change HTML attribute values.</p>
+    <!-- 
+    Paragraph explaining that JavaScript can manipulate HTML attributes dynamically.
+    -->
+
+    <p>
+      In this case, JavaScript changes the <code>src</code> attribute of an
+      image.
+    </p>
+    <!-- 
+    <code> tag highlights the word "src", showing it is an HTML attribute.
+    The paragraph explains that the example will change the image source dynamically.
+    -->
+
+    <!-- 
+    Button to turn ON the light:
+    - type is default "button"
+    - onclick attribute runs JavaScript when the button is clicked
+    - document.getElementById('myImage') → selects the <img> element with id="myImage"
+    - .src = 'Bulb_On.jpg' → changes the source of the image to the "on" bulb image
+    -->
+    <button onclick="document.getElementById('myImage').src = 'Bulb_On.png'">
+      Turn on the light
+    </button>
+
+    <!-- 
+    Image element representing the light bulb:
+    - id="myImage" → uniquely identifies this element for JavaScript to target
+    - src="Bulb_Off.jpg" → initial image source (light is off by default)
+    - alt="Light" → text shown if the image cannot be loaded, for accessibility
+    - style="width:100px" → sets the displayed width of the image
+    -->
+    <img id="myImage" src="Bulb_Off.png" alt="Light" style="width: 100px" />
+
+    <!-- 
+    Button to turn OFF the light:
+    - onclick changes the <img> src back to the "off" bulb image
+    -->
+    <button onclick="document.getElementById('myImage').src = 'Bulb_Off.png'">
+      Turn off the light
+    </button>
+  </body>
+</html>

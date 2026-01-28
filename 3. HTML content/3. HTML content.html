@@ -1,0 +1,92 @@
+<!doctype html>
+<!-- 
+The <!doctype html> declaration:
+- Tells the browser that this is an HTML5 document.
+- Ensures modern rendering and standards mode.
+-->
+
+<html lang="en">
+  <!-- 
+<html> is the root element of the HTML document.
+lang="en" specifies that the language of the page is English.
+-->
+
+  <head>
+    <!-- 
+    <head> contains metadata about the page:
+    - Not displayed directly in the browser window
+    - Includes information like title, character encoding, viewport settings
+    -->
+
+    <meta charset="UTF-8" />
+    <!-- 
+    Sets the character encoding to UTF-8.
+    UTF-8 supports almost all characters, including letters, numbers, symbols.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 
+    Ensures the page scales correctly on mobile devices.
+    width=device-width → page width matches screen width
+    initial-scale=1.0 → initial zoom level is 1
+    -->
+
+    <title>Hello JavaScript</title>
+    <!-- 
+    The text shown in the browser tab
+    -->
+  </head>
+
+  <body>
+    <!-- 
+    <body> contains all the visible content of the page
+    -->
+
+    <h1>This is my second program</h1>
+    <!-- 
+    <h1> is a heading (largest size)
+    Displays the title of this program on the page
+    -->
+
+    <button
+      type="button"
+      onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript'"
+    >
+      Click Me
+    </button>
+    <!-- 
+    <button> creates a clickable button.
+
+    type="button":
+    - Specifies a normal button (does not submit forms)
+
+    onclick="...":
+    - This is an event handler.
+    - When the button is clicked, the JavaScript code inside will run.
+
+    document.getElementById('demo').innerHTML = 'Hello JavaScript':
+    - document → represents the entire HTML page
+    - getElementById('demo') → finds the element with id="demo"
+    - innerHTML → represents the content inside that element
+    - 'Hello JavaScript' → new text to replace the current content
+
+    In summary: Clicking the button replaces the paragraph text with "Hello JavaScript".
+    -->
+
+    <p id="demo">JavaScript can change HTML content</p>
+    <!-- 
+    <p> is a paragraph element used to display text.
+
+    id="demo":
+    - Provides a unique identifier for this element
+    - JavaScript uses this id to find and update this paragraph
+
+    Initial text:
+    - "JavaScript can change HTML content" 
+    - This is what the user sees before clicking the button
+
+    After clicking the button:
+    - Text changes to "Hello JavaScript"
+    -->
+  </body>
+</html>
